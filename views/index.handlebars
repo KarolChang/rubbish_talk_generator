@@ -1,0 +1,63 @@
+{{!-- Navbar --}}
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand ml-2" href="#" style="color:#1dcc22">Rubbish Talk Generator</a>
+</nav>
+
+{{!-- Header --}}
+<header>
+  <h1 class="head mt-3" style="text-align: center;">今晚 我想來點...幹話?! <i class="far fa-angry"></i></h1>
+</header>
+{{!-- Form --}}
+<form action="/" method="POST">
+  <div class="container mt-5 justify-content-center">
+    {{!-- Card Section --}}
+    <div class="row d-flex justify-content-around">
+      {{!-- Card One --}}
+      <div class="card col-3">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          class="card-img-top" alt="..." style="height:75%; width:100%">
+        <div class="card-body" style="text-align: center;">
+          <input class="form-check-input" type="radio" name="career" id="engineer" value="engineer">
+          <label class="form-check-label" for="engineer">
+            工程師
+          </label>
+        </div>
+      </div>
+      {{!-- Card Two --}}
+      <div class="card col-3">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          class="card-img-top" alt="..." style="height:75%;">
+        <div class="card-body" style="text-align: center;">
+          <input class="form-check-input" type="radio" name="career" id="designer" value="designer">
+          <label class="form-check-label" for="designer">
+            設計師
+          </label>
+        </div>
+      </div>
+      {{!-- Card Three --}}
+      <div class="card col-3">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          class="card-img-top" alt="..." style="height:75%;">
+        <div class="card-body" style="text-align: center;">
+          <input class="form-check-input" type="radio" name="career" id="entrepreneur" value="entrepreneur">
+          <label class="form-check-label" for="entrepreneur">
+            創業家
+          </label>
+        </div>
+      </div>
+    </div>
+    {{!-- Button + Alert --}}
+    <div class="row">
+      {{!-- Button --}}
+      <div class="col-8 ml-5" style="margin-top:30px">
+        <button type="submit" class="btn btn-success">Say RubbishTalk</button>
+        {{!-- Alert --}}
+        {{#if rubbishTalk}}
+        <span class="alert alert-success ml-5" role="alert">
+          {{ rubbishTalk }}
+        </span>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</form>
